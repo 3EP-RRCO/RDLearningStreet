@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Rural Development Learning Street: an interactive study academy for USDA Section 502 Direct loan-packaging concepts.">
+<title>Rural Development Learning Street</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">A friendly, practical study academy</p>
+    <h1>🏡 Rural Development Learning Street</h1>
+    <p class="subtitle">The Section 502 Direct Adventure</p>
+    <p>Learn the concepts, practice the decisions, and verify exact requirements against current USDA materials.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#lessons">Start learning</a>
+      <a class="button secondary" href="#official-resources">Official resources</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="notice" aria-label="Important note">
+    <strong>Study aid, not official USDA training.</strong>
+    <span>This independent learning project does not certify anyone as a packager and is not a substitute for current USDA regulations, handbooks, or required training. Verify program details before advising an applicant.</span>
+  </section>
+
+  <section class="progress-panel" aria-labelledby="progress-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">Your learning dashboard</p><h2 id="progress-title">Six-stop learning journey</h2></div>
+      <span class="progress-count" id="progress-count">0 of 6 complete</span>
+    </div>
+    <div class="progress-track" role="progressbar" aria-label="Lessons completed" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="progress-bar"><span id="progress-fill"></span></div>
+    <p class="muted small">Progress is saved in this browser on this device. Clearing site data may erase it.</p>
+  </section>
+
+  <section id="lessons">
+    <div class="section-heading">
+      <div><p class="eyebrow">Choose your next stop</p><h2>Meet the Learning Street crew</h2></div>
+    </div>
+    <div class="lesson-grid" id="lesson-grid"></div>
+  </section>
+
+  <section class="character-strip">
+    <article class="character-card"><div class="character-icon">🏡</div><div><h3>Homey the House</h3><p>Property, location, and homesite questions.</p></div></article>
+    <article class="character-card"><div class="character-icon">🦉</div><div><h3>Professor Numbers</h3><p>Income concepts, expenses, and payment assistance.</p></div></article>
+    <article class="character-card"><div class="character-icon">📋</div><div><h3>Packager Pat</h3><p>Documentation, file quality, and professional boundaries.</p></div></article>
+    <article class="character-card"><div class="character-icon">🌾</div><div><h3>Ranger RD</h3><p>USDA Rural Development's role and program distinctions.</p></div></article>
+  </section>
+
+  <section id="lesson-view" class="lesson-view hidden" aria-live="polite">
+    <div class="lesson-topline"><button id="back-button" class="text-button">← All lessons</button><span id="lesson-kicker" class="eyebrow"></span></div>
+    <h2 id="lesson-title"></h2>
+    <p id="lesson-intro" class="lesson-intro"></p>
+    <div id="lesson-content"></div>
+    <div class="quiz-card">
+      <p class="eyebrow">Knowledge checkpoint</p>
+      <h3 id="quiz-question"></h3>
+      <div id="quiz-options" class="quiz-options"></div>
+      <p id="quiz-feedback" class="quiz-feedback" aria-live="polite"></p>
+      <div class="quiz-actions">
+        <button id="check-answer" class="button primary">Check answer</button>
+        <button id="next-question" class="button secondary hidden">Next question</button>
+      </div>
+    </div>
+    <div class="lesson-footer">
+      <label class="complete-label"><input type="checkbox" id="complete-checkbox"> Mark this lesson complete</label>
+      <button id="next-lesson-button" class="button primary">Next lesson →</button>
+    </div>
+  </section>
+
+  <section id="official-resources" class="resources-section">
+    <p class="eyebrow">Check the source, not just the study guide</p>
+    <h2>Official USDA resources</h2>
+    <p>USDA requirements and training availability can change. Use the official source for the current rule and keep a note of when you checked it.</p>
+    <div class="resource-list">
+      <a href="https://www.rd.usda.gov/programs-services/services/direct-loan-application-packagers" target="_blank" rel="noopener noreferrer"><span><strong>Direct Loan Application Packager Resources</strong><small>USDA Rural Development program and packager information</small></span><span>↗</span></a>
+      <a href="https://www.rd.usda.gov/resources/directives/handbooks" target="_blank" rel="noopener noreferrer"><span><strong>USDA Rural Development Handbooks</strong><small>Official directives and handbook library</small></span><span>↗</span></a>
+      <a href="https://www.rd.usda.gov/" target="_blank" rel="noopener noreferrer"><span><strong>USDA Rural Development</strong><small>Agency mission, programs, and local office information</small></span><span>↗</span></a>
+      <a href="https://www.usda502directtraining.org/" target="_blank" rel="noopener noreferrer"><span><strong>Section 502 Direct Training</strong><small>Check current training requirements and schedule directly</small></span><span>↗</span></a>
+      <a href="https://eligibility.sc.egov.usda.gov/eligibility/" target="_blank" rel="noopener noreferrer"><span><strong>USDA Income and Property Eligibility</strong><small>Official eligibility tools; confirm the selected program and current inputs</small></span><span>↗</span></a>
+    </div>
+    <p class="small muted">Handbook tip: locate the current version of HB-1-3550 and the applicable chapter/attachment in USDA's handbook library. Do not rely on an old saved PDF if a newer version exists.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Rural Development Learning Street · Independent educational project</p>
+  <p class="small">Not affiliated with, endorsed by, or operated by USDA. No official characters or copyrighted show characters are used.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
