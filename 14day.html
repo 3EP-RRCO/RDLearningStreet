@@ -77,3 +77,39 @@ const quiz=document.getElementById('quiz');questions.forEach((q,i)=>{const d=doc
 document.getElementById('grade').addEventListener('click',()=>{let score=0,answered=0;questions.forEach((q,i)=>{const sel=document.querySelector(`input[name="q${i}"]:checked`);const f=document.getElementById('f'+i);f.classList.remove('hidden','correct','wrong');if(sel){answered++;if(Number(sel.value)===q.a){score++;f.classList.add('correct');f.innerHTML='<strong>Correct.</strong> '+q.e}else{f.classList.add('wrong');f.innerHTML='<strong>Review.</strong> '+q.e}}else{f.classList.add('wrong');f.innerHTML='<strong>Not answered.</strong> '+q.e}});const r=document.getElementById('quizResult');r.classList.remove('hidden');r.innerHTML=`<div class="score">${score} / ${questions.length}</div><p>You answered ${answered} of ${questions.length} questions.</p><p>${score>=9?'Excellent review score. Keep checking the official sources for current details.':score>=7?'Good progress. Revisit the explanations for missed questions, then try again.':'Keep learning. Review the matching day lessons and retry the quiz.'}</p><p class="muted small">This is a learning check, not an official USDA exam or proof of certification.</p>`;r.scrollIntoView({behavior:'smooth',block:'center'})});
 document.getElementById('retake').addEventListener('click',()=>{questions.forEach((q,i)=>{document.querySelectorAll(`input[name="q${i}"]`).forEach(x=>x.checked=false);const f=document.getElementById('f'+i);f.className='feedback hidden';f.textContent=''});const r=document.getElementById('quizResult');r.classList.add('hidden');r.textContent='';window.scrollTo({top:quiz.offsetTop,behavior:'smooth'})});
 </script></body></html>
+```html
+<div class="home-navigation">
+  <a href="index.html" class="home-button">
+    🏠 Back to Learning Street
+  </a>
+</div>
+
+<style>
+  .home-navigation {
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .home-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #2e7048;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .home-button:hover {
+    background: #205437;
+    transform: translateY(-2px);
+  }
+
+  .home-button:focus-visible {
+    outline: 3px solid #f4c542;
+    outline-offset: 4px;
+  }
+</style>
