@@ -59,3 +59,39 @@ document.getElementById('submit').onclick=()=>{
 document.getElementById('restart').onclick=()=>{current=0;answers=Array(qs.length).fill(null);graded=false;document.getElementById('result').classList.add('hidden');render();window.scrollTo({top:0,behavior:'smooth'});};
 render();
 </script></body></html>
+```html
+<div class="home-navigation">
+  <a href="index.html" class="home-button">
+    🏠 Back to Learning Street
+  </a>
+</div>
+
+<style>
+  .home-navigation {
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .home-button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #2e7048;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .home-button:hover {
+    background: #205437;
+    transform: translateY(-2px);
+  }
+
+  .home-button:focus-visible {
+    outline: 3px solid #f4c542;
+    outline-offset: 4px;
+  }
+</style>
